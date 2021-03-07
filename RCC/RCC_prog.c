@@ -34,7 +34,7 @@
 
 // }
 
-/* initiliz System Clock for system */
+/* initilize System Clock for system */
 void RCC_voidInit(clksystem Copy_ClkSystem)
 {
     switch (Copy_ClkSystem)

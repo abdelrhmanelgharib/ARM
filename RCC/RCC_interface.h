@@ -36,7 +36,7 @@ typedef enum
     RCC_PLLI2SRDY ,
     RCC_PLLSAION ,
     RCC_PLLSAIRDY
-}
+}rcc_reg;
 
 
 typedef enum
