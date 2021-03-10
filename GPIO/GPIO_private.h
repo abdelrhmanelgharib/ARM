@@ -78,4 +78,12 @@
 
 
 
+#define GPIO_FULL_OUTPUT                 0x55555555
+#define GPIO_FULL_OUTPUT_PUSHPULL        0x0000
+#define GPIO_FULL_OUTPUT_OPENDRAIN       0xFFFF
+#define GPIO_FULL_MODER_AF               0xAAAAAAAA
+#define GPIO_FULL_HIGH                   0xFFFF
+#define GPIO_FULL_INPUT                  0x0000
+
+
 #endif /* GPIO_PRIVATE_H_ */

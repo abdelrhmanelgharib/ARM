@@ -67,9 +67,5 @@ typedef enum
 }gpio_type;
 
 
-// #define HSE     0
-// #define HSI     1
-// #define PLL_P   3
-// #define PLL_R   4
 
 #endif  /* RCC_INTERFACE_H_ */
