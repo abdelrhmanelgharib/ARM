@@ -59,8 +59,18 @@ typedef enum
 	GPIO_OUTPUT_OPENDRAIN
 }gpio_enumOTR;
 
+typedef enum
+{
+	LOW = 0,
+	HIGH
+}value_enumType;
 
 
-void GPIO_voidInit(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGpioPINID, gpio_enummode Copy_enumGPIOMode, gpio_enumOTR Copy_enumOTR);
+void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGpioPINID, gpio_enummode Copy_enumGPIOMode, gpio_enumOTR Copy_enumOTR);
+void GPIO_voidSetPortDirection(gpio_enumtype Copy_enumGPIOType, gpio_enummode Copy_enumGPIOMode, gpio_enumOTR Copy_enumOTR);
+void GPIO_voidSetPinValue(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGpioPINID, value_enumType Copy_enumPINValue);
+void GPIO_voidSetPortValue(gpio_enummode Copy_enumGPIOType, value_enumType Copy_enumPINValue);
+value_enumType GPIO_voidGetPinvalue(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGpioPINID);
+
 
 #endif /* GPIO_INTERFACE_H_ */
