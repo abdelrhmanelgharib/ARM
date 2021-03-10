@@ -1101,35 +1101,35 @@ value_enumType GPIO_voidGetPinvalue(gpio_enumtype Copy_enumGPIOType, gpio_enumpi
 	switch (Copy_enumGPIOType)
 	{
 		case GPIOA:
-			ret = GETBIT(GPIOA, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOA, Copy_enumGpioPINID);
 		break;
 
 		case GPIOB:
-			ret = GETBIT(GPIOB, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOB, Copy_enumGpioPINID);
 		break;
 
 		case GPIOC:
-			ret = GETBIT(GPIOC, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOC, Copy_enumGpioPINID);
 		break;
 
 		case GPIOD:
-			ret = GETBIT(GPIOD, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOD, Copy_enumGpioPINID);
 		break;
 
 		case GPIOE:
-			ret = GETBIT(GPIOE, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOE, Copy_enumGpioPINID);
 		break;
 
 		case GPIOF:
-			ret = GETBIT(GPIOF, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOF, Copy_enumGpioPINID);
 		break;
 
 		case GPIOG:
-			ret = GETBIT(GPIOG, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOG, Copy_enumGpioPINID);
 		break;
 
 		case GPIOH:
-			ret = GETBIT(GPIOH, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOH, Copy_enumGpioPINID);
 		break;
 		
 		default:
