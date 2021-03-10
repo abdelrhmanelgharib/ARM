@@ -1,8 +1,8 @@
 /* **************************************************************************************
- * GPIO_prog.c																			*
- *																						*
- *  Created on: Mar 8, 2021																*
- *      Author: Elgharib																*
+ * GPIO_prog.c										*
+ *											*
+ *  Created on: Mar 8, 2021								*
+ *      Author: Elgharib								*
  * **************************************************************************************/
 
 #include "../Inc/STD_Types.h"
@@ -14,11 +14,11 @@
 #include "../Inc/GPIO_config.h"
 
 /* *************************************************************************************
- * in this function initialize port and pin direction and mode of pin					*
- * GPIO  : GPIOA - GPIOB - GPIOC - GPIOD - GPIOE - GPIOF - GPIOG - GPIOH				*
- * PINID : PIN0 ... PIN15																*
- * PIN Mode : GPIO_OUTPUT - GPIO_INPUT - GPIO_ALTERNATE_FUNC - GPIO_ANALOGE				*
- * PIN MOde : GPIO_OUTPUT_PUSHPULL - GPIO_OUTPUT_OPENDRAIN								*
+ * in this function initialize port and pin direction and mode of pin			*		
+ * GPIO  : GPIOA - GPIOB - GPIOC - GPIOD - GPIOE - GPIOF - GPIOG - GPIOH		*		
+ * PINID : PIN0 ... PIN15								*		
+ * PIN Mode : GPIO_OUTPUT - GPIO_INPUT - GPIO_ALTERNATE_FUNC - GPIO_ANALOGE		*		
+ * PIN MOde : GPIO_OUTPUT_PUSHPULL - GPIO_OUTPUT_OPENDRAIN				*		
  * **************************************************************************************/
 void GPIO_voidInit(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGPIOPINID, gpio_enummode Copy_enumGPIOMode, gpio_enumOTR Copy_enumOTR)
 {
