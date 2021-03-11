@@ -5,13 +5,13 @@
  *      Author: Elgharib																*
  * **************************************************************************************/
 
-#include "../Inc/STD_Types.h"
-#include "../Inc/BIT_Math.h"
+#include "STD_Types.h"
+#include "BIT_Math.h"
 
 
-#include "../Inc/GPIO_interface.h"
-#include "../Inc/GPIO_private.h"
-#include "../Inc/GPIO_config.h"
+#include "GPIO_interface.h"
+#include "GPIO_private.h"
+#include "GPIO_config.h"
 
 /* *************************************************************************************
  * in this function initialize port and pin direction and mode of pin					*
@@ -990,7 +990,7 @@ void GPIO_voidSetPinValue(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_en
  * GPIO  : GPIOA - GPIOB - GPIOC - GPIOD - GPIOE - GPIOF - GPIOG - GPIOH				*
  * PortValue : HIGH - LOW																*
  * **************************************************************************************/
-void GPIO_voidSetPortValue(gpio_enummode Copy_enumGPIOType, value_enumType Copy_enumPortValue)
+void GPIO_voidSetPortValue(gpio_enumtype Copy_enumGPIOType, value_enumType Copy_enumPortValue)
 {
 	switch (Copy_enumGPIOType)
 	{
