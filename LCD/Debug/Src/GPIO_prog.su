@@ -1,0 +1,5 @@
+GPIO_prog.c:23:6:GPIO_voidSetPinDirection	16	static
+GPIO_prog.c:485:6:GPIO_voidSetPortDirection	16	static
+GPIO_prog.c:881:6:GPIO_voidSetPinValue	16	static
+GPIO_prog.c:993:6:GPIO_voidSetPortValue	16	static
+GPIO_prog.c:1097:16:GPIO_voidGetPinvalue	24	static
