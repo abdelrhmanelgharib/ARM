@@ -8,10 +8,9 @@
 #include "STD_Types.h"
 #include "BIT_Math.h"
 
-
-#include "GPIO_interface.h"
 #include "GPIO_private.h"
 #include "GPIO_config.h"
+#include "GPIO_interface.h"
 
 /* *************************************************************************************
  * in this function initialize port and pin direction and mode of pin					*
@@ -74,6 +73,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 				
 				break;
 
+				case GPIO_INPUT:
+					CLRBIT(GPIOA_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOA_MODER, ((Copy_enumGPIOPINID * 2) + 1));
+				break;
+
 				default:
 				break;
 				
@@ -129,6 +133,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 				
 				break;
 
+				case GPIO_INPUT:
+					CLRBIT(GPIOB_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOB_MODER, ((Copy_enumGPIOPINID * 2) + 1));
+				break;
+
 				default:
 				break;
 				
@@ -182,6 +191,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 						break;
 					}
 				
+				break;
+
+				case GPIO_INPUT:
+					CLRBIT(GPIOC_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOC_MODER, ((Copy_enumGPIOPINID * 2) + 1));
 				break;
 
 				default:
@@ -240,6 +254,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 				
 				break;
 
+				case GPIO_INPUT:
+					CLRBIT(GPIOD_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOD_MODER, ((Copy_enumGPIOPINID * 2) + 1));
+				break;
+
 				default:
 				break;
 				
@@ -294,6 +313,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 						break;
 					}
 				
+				break;
+
+				case GPIO_INPUT:
+					CLRBIT(GPIOE_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOE_MODER, ((Copy_enumGPIOPINID * 2) + 1));
 				break;
 
 				default:
@@ -352,6 +376,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 				
 				break;
 
+				case GPIO_INPUT:
+					CLRBIT(GPIOF_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOF_MODER, ((Copy_enumGPIOPINID * 2) + 1));
+				break;
+
 				default:
 				break;
 				
@@ -408,6 +437,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 				
 				break;
 
+				case GPIO_INPUT:
+					CLRBIT(GPIOG_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOG_MODER, ((Copy_enumGPIOPINID * 2) + 1));
+				break;
+
 				default:
 				break;
 				
@@ -461,6 +495,11 @@ void GPIO_voidSetPinDirection(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Cop
 						break;
 					}
 				
+				break;
+
+				case GPIO_INPUT:
+					CLRBIT(GPIOH_MODER, Copy_enumGPIOPINID * 2);
+					CLRBIT(GPIOH_MODER, ((Copy_enumGPIOPINID * 2) + 1));
 				break;
 
 				default:
@@ -1101,35 +1140,35 @@ value_enumType GPIO_voidGetPinvalue(gpio_enumtype Copy_enumGPIOType, gpio_enumpi
 	switch (Copy_enumGPIOType)
 	{
 		case GPIOA:
-			Ret_value = GETBIT(GPIOA, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOA_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOB:
-			Ret_value = GETBIT(GPIOB, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOB_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOC:
-			Ret_value = GETBIT(GPIOC, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOC_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOD:
-			Ret_value = GETBIT(GPIOD, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOD_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOE:
-			Ret_value = GETBIT(GPIOE, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOE_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOF:
-			Ret_value = GETBIT(GPIOF, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOF_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOG:
-			Ret_value = GETBIT(GPIOG, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOG_IDR, Copy_enumGpioPINID);
 		break;
 
 		case GPIOH:
-			Ret_value = GETBIT(GPIOH, Copy_enumGpioPINID);
+			Ret_value = GETBIT(GPIOH_IDR, Copy_enumGpioPINID);
 		break;
 		
 		default:
