@@ -1,5 +1,5 @@
 /* **************************************************************************************
- * GPIO_prog.c																			*
+ * GPIO_private.h																		*
  *																						*
  *  Created on: Mar 8, 2021																*
  *      Author: Elgharib																*
@@ -12,6 +12,7 @@
 
 #define GPIOA_MODER				*((u32*)(GPIOA_BASE_ADDRESS + 0x00))
 #define GPIOA_OTYPER			*((u32*)(GPIOA_BASE_ADDRESS + 0x04))
+#define GPIOA_IDR				*((u32*)(GPIOA_BASE_ADDRESS + 0x10))
 #define GPIOA_ODR				*((u32*)(GPIOA_BASE_ADDRESS + 0x14))
 #define GPIOA_BSRR				*((u32*)(GPIOA_BASE_ADDRESS + 0x18))
 
@@ -20,6 +21,7 @@
 
 #define GPIOB_MODER				*((u32*)(GPIOB_BASE_ADDRESS + 0x00))
 #define GPIOB_OTYPER			*((u32*)(GPIOB_BASE_ADDRESS + 0x04))
+#define GPIOB_IDR				*((u32*)(GPIOB_BASE_ADDRESS + 0x10))
 #define GPIOB_ODR				*((u32*)(GPIOB_BASE_ADDRESS + 0x14))
 #define GPIOB_BSRR				*((u32*)(GPIOB_BASE_ADDRESS + 0x18))
 
@@ -28,6 +30,7 @@
 
 #define GPIOC_MODER				*((u32*)(GPIOC_BASE_ADDRESS + 0x00))
 #define GPIOC_OTYPER			*((u32*)(GPIOC_BASE_ADDRESS + 0x04))
+#define GPIOC_IDR				*((u32*)(GPIOC_BASE_ADDRESS + 0x10))
 #define GPIOC_ODR				*((u32*)(GPIOC_BASE_ADDRESS + 0x14))
 #define GPIOC_BSRR				*((u32*)(GPIOC_BASE_ADDRESS + 0x18))
 
@@ -36,6 +39,7 @@
 
 #define GPIOD_MODER				*((u32*)(GPIOD_BASE_ADDRESS + 0x00))
 #define GPIOD_OTYPER			*((u32*)(GPIOD_BASE_ADDRESS + 0x04))
+#define GPIOD_IDR				*((u32*)(GPIOD_BASE_ADDRESS + 0x10))
 #define GPIOD_ODR				*((u32*)(GPIOD_BASE_ADDRESS + 0x14))
 #define GPIOD_BSRR				*((u32*)(GPIOD_BASE_ADDRESS + 0x18))
 
@@ -46,6 +50,7 @@
 
 #define GPIOE_MODER				*((u32*)(GPIOE_BASE_ADDRESS + 0x00))
 #define GPIOE_OTYPER			*((u32*)(GPIOE_BASE_ADDRESS + 0x04))
+#define GPIOE_IDR			  	*((u32*)(GPIOE_BASE_ADDRESS + 0x10))
 #define GPIOE_ODR				*((u32*)(GPIOE_BASE_ADDRESS + 0x14))
 #define GPIOE_BSRR				*((u32*)(GPIOE_BASE_ADDRESS + 0x18))
 
@@ -55,6 +60,7 @@
 
 #define GPIOF_MODER				*((u32*)(GPIOF_BASE_ADDRESS + 0x00))
 #define GPIOF_OTYPER			*((u32*)(GPIOF_BASE_ADDRESS + 0x04))
+#define GPIOF_IDR				*((u32*)(GPIOF_BASE_ADDRESS + 0x10))
 #define GPIOF_ODR				*((u32*)(GPIOF_BASE_ADDRESS + 0x14))
 #define GPIOF_BSRR				*((u32*)(GPIOF_BASE_ADDRESS + 0x18))
 
@@ -64,6 +70,7 @@
 
 #define GPIOG_MODER				*((u32*)(GPIOG_BASE_ADDRESS + 0x00))
 #define GPIOG_OTYPER			*((u32*)(GPIOG_BASE_ADDRESS + 0x04))
+#define GPIOG_IDR			*((u32*)(GPIOG_BASE_ADDRESS + 0x10))
 #define GPIOG_ODR				*((u32*)(GPIOG_BASE_ADDRESS + 0x14))
 #define GPIOG_BSRR				*((u32*)(GPIOG_BASE_ADDRESS + 0x18))
 
@@ -73,6 +80,7 @@
 
 #define GPIOH_MODER				*((u32*)(GPIOH_BASE_ADDRESS + 0x00))
 #define GPIOH_OTYPER			*((u32*)(GPIOH_BASE_ADDRESS + 0x04))
+#define GPIOH_IDR				*((u32*)(GPIOH_BASE_ADDRESS + 0x10))
 #define GPIOH_ODR				*((u32*)(GPIOH_BASE_ADDRESS + 0x14))
 #define GPIOH_BSRR				*((u32*)(GPIOH_BASE_ADDRESS + 0x18))
 
