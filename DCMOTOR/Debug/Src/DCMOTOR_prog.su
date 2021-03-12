@@ -1,0 +1,2 @@
+DCMOTOR_prog.c:20:6:DCMOTOR_voidinit	8	static
+DCMOTOR_prog.c:31:6:DCMOTOR_voidControl	16	static
