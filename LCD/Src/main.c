@@ -26,6 +26,7 @@
 #include "GPIO_interface.h"
 
 
+
 #include "LCD_interface.h"
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
@@ -35,16 +36,19 @@
 int main(void)
 {
 	RCC_voidInit();
-	RCC_voidEnablePeripheralCLK(RCC_AHB1, RCC_GPIOC_EN);
-	RCC_voidEnablePeripheralCLK(RCC_AHB1, RCC_GPIOB_EN);
+
 
 	LCD_voidInit(LCD_enum_4BITS_MODE);
-	LCD_voidWriteChar('c');
-	LCD_voidWriteChar('D');
+	LCD_voidGoTo(0, 5);
+	LCD_voidWriteString((u8*)"Welcome");
+	LCD_voidGoTo(1, 3);
+	LCD_voidWriteString((u8*)"4 BITS Mode");
+
+
     /* Loop forever */
-	for(;;);
+	while(1)
 	{
-		LCD_voidWriteChar('c');
-		LCD_voidWriteChar('D');
+
 	}
 }
+

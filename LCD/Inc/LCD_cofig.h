@@ -8,10 +8,10 @@
 #ifndef LCD_COFIG_H_
 #define LCD_COFIG_H_
 
-#define LCD_RS_PIN           GPIO_PIN5
-#define RS_PORT              GPIOB
-#define LCD_E_PIN            GPIO_PIN7
-#define E_PORT               GPIOB
+#define LCD_RS_PIN           GPIO_PIN2
+#define RS_PORT              GPIOC
+#define LCD_E_PIN            GPIO_PIN3
+#define E_PORT               GPIOC
  
 #define LCD_4BITS_PIN0       GPIO_PIN4
 #define LCD_4BITS_PIN1       GPIO_PIN5
