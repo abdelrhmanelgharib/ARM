@@ -1,0 +1,6 @@
+SEVSEG_prog.c:19:6:SEVSEG_voidInitilize	8	static
+SEVSEG_prog.c:35:6:SEVSEG_voidDisplay	16	static
+SEVSEG_prog.c:348:6:SEVSEG_voidEnable	16	static
+SEVSEG_prog.c:383:6:SEVSEG_voidDisable	16	static
+SEVSEG_prog.c:417:6:SEVSEG_voidPov	16	static
+SEVSEG_prog.c:441:6:SEVSEG_voidCount	16	static
