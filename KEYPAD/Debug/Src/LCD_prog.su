@@ -1,0 +1,7 @@
+LCD_prog.c:19:6:_delay_ms	24	static,ignoring_inline_asm
+LCD_prog.c:30:6:LCD_voidInit	16	static
+LCD_prog.c:73:6:LCD_voidSendCommand	16	static
+LCD_prog.c:114:6:LCD_voidWriteChar	16	static
+LCD_prog.c:152:6:LCD_voidWriteString	24	static
+LCD_prog.c:164:6:LCD_voidPrintUnsignedInteger	40	static
+LCD_prog.c:183:6:LCD_voidGoTo	16	static
