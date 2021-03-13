@@ -55,10 +55,9 @@ int main(void)
 
 
     /* Loop forever */
-    SEVSEG_voidEnable(SEG0);
+
 	while(1)
 	{
-		//SEVSEG_voidCount();
-		SEVSEG_voidDisplay(SEG0, 0);
+		SEVSEG_voidCount();
 	}
 }
