@@ -1133,7 +1133,7 @@ void GPIO_voidSetPortValue(gpio_enumtype Copy_enumGPIOType, value_enumType Copy_
  * GPIO  : GPIOA - GPIOB - GPIOC - GPIOD - GPIOE - GPIOF - GPIOG - GPIOH				*
  * PINID : GPIO_PIN0 ... GPIO_PIN15														*
  * **************************************************************************************/
-value_enumType GPIO_voidGetPinvalue(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGpioPINID)
+value_enumType GPIO_enumGetPinvalue(gpio_enumtype Copy_enumGPIOType, gpio_enumpins Copy_enumGpioPINID)
 {
 	value_enumType Ret_value;
 
