@@ -9,16 +9,12 @@
 
 
 
-void RCC_voidInit(clksystem Copy_ClkSystem);
-void RCC_voidEnablePeripheralCLK(RCC_Bus Copy_u8BusID, gpio_type Copy_u8PerID);
-void RCC_voidDisablePeripheralCLK(RCC_Bus Copy_u8BusID, gpio_type Copy_u8PerID);
-
-typedef enum
-{
-    RCC_HSI=0,
-    RCC_HSE ,
-    RCC_PLL
-}clksystem;
+// typedef enum
+// {
+//     RCC_HSI=0,
+//     RCC_HSE ,
+//     RCC_PLL
+// }clksystem;
 
 typedef enum 
 {
@@ -43,8 +39,8 @@ typedef enum
 {
     RCC_AHB1=0,
     RCC_AHB2,
-    RCC_APP1,
-    RCC_APP2
+    RCC_APB1,
+    RCC_APB2
 }RCC_Bus;
 
 typedef enum 
@@ -65,6 +61,13 @@ typedef enum
     RCC_OTGHSULPIEN
 
 }gpio_type;
+
+
+/* Function ProtoTypes */
+void RCC_voidInit(void);
+//void RCC_voidInit(clksystem Copy_ClkSystem);
+void RCC_voidEnablePeripheralCLK(RCC_Bus Copy_u8BusID, gpio_type Copy_u8PerID);
+void RCC_voidDisablePeripheralCLK(RCC_Bus Copy_u8BusID, gpio_type Copy_u8PerID);
 
 
 
