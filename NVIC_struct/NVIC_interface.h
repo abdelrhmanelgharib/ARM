@@ -20,7 +20,7 @@ void    NVIC_voidDisablePeripheral(u8 Copy_u8InterruptNumb);
 void    NVIC_voidSetPendingFlag(u8 Copy_u8InterruptNumb);
 void    NVIC_voidClearPendingFlag(u8 Copy_u8InterruptNumb);
 u8      NVIC_u8GetActiveFlag(u8 Copy_u8InterruptNumb);
-void    NVIC_voidSetPriority(u8 Copy_u8Priority, u8 Copy_u8InterruptNumb);
+void    NVIC_voidSetPriority(u8 Copy_u8InterruptNumb, u8 Copy_u8Priority);
 
 
 #endif /* NVIC_INTERFACE_H_ */

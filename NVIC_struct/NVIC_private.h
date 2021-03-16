@@ -32,20 +32,24 @@ typedef struct
     volatile u32 NVIC_IABR[8];
 
     /* Interrupt priority register */
-    volatile u32 NVIC_IPR[240];
-    
+    volatile u8 NVIC_IPR[240];
+
 }NVIC_Type_t;
 
 #define NVIC    ((NVIC_Type_t*)(NVIC_BASE_ADD))
 
+
+#define NVIC_REGNUM(x)          ((x) / (32))
+#define NVIC_BITNUM(x)          ((x) % (32))    
+
 /****************************************************************************************
  *                             Interrupt Priority grouping                              *
  ****************************************************************************************/
-#define _16_GROUPS_0_SUB     0x05FA0300
-#define _8_GROUPS_2_SUB      0X05FA0400
-#define _4_GROUPS_4_SUB      0X05FA0500
-#define _2_GROUPS_8_SUB      0X05FA0600
-#define _0_GROUPS_16_SUB     0X05FA0700
+#define _16_GROUPS_0_SUB      0x05FA0300
+#define  _8_GROUPS_2_SUB      0X05FA0400
+#define  _4_GROUPS_4_SUB      0X05FA0500
+#define  _2_GROUPS_8_SUB      0X05FA0600
+#define  _0_GROUPS_16_SUB     0X05FA0700
 
 
 #define NVIC_IPRx           ((volatile u8*)(NVIC_BASE_ADD + 0x400))
