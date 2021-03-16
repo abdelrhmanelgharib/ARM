@@ -26,7 +26,7 @@ void NVIC_voidInit(void)
     #define SCB_AIRCR       *((volatile u32*)(SCB_BASE_ADD + 0x0C))
     #endif
 
-   // SCB_AIRCR = 
+    SCB_AIRCR = NVIC_NO_GROUPS_SUB;
  
 }   /* NVIC_voidInit */
 
@@ -186,15 +186,9 @@ u8      NVIC_u8GetActiveFlag(u8 Copy_u8InterruptNumb)
     }
     else if(Copy_u8InterruptNumb < 96)
     {
-        /* ISER0 (32:63)        */
+        /* ISER0 (64:96)        */
         /* READ-Modify-Write    */
         Local_u8ActiveBit = GETBIT(NVIC_IABR2, (Copy_u8InterruptNumb - 64));
-    }
-    else if(Copy_u8InterruptNumb < 128)
-    {
-        /* ISER0 (32:63)        */
-        /* READ-Modify-Write    */
-        Local_u8ActiveBit = GETBIT(NVIC_IABR3, (Copy_u8InterruptNumb - 96));
     }
     else
     {
@@ -204,11 +198,11 @@ u8      NVIC_u8GetActiveFlag(u8 Copy_u8InterruptNumb)
 }   /* NVIC_u8GetActiveFlag */
 
 
-void    NVIC_voidSetPriority(u8 Copy_u8Priority, u8 Copy_u8InterruptNumb)
+void    NVIC_voidSetPriority(u8 Copy_u8InterruptNumb, u8 Copy_u8Priority)
 {
     if(Copy_u8InterruptNumb < 97)
     {
-        NVIC_IPRx[Copy_u8InterruptNumb] = (Copy_u8InterruptNumb << 4);
+        NVIC_IPRx[Copy_u8InterruptNumb] = (Copy_u8Priority << 4);
     }
     else
     {
