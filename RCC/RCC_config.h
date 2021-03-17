@@ -10,14 +10,17 @@
 
 /*******************************************************************************
  *                               SYSTEM CLOCK                                  *
- *                                   HSI                                       *
- *                                   HSE                                       *
- *                                   PLL_P                                     *
- *                                   PLL_R                                     *       
+ *                                 RCC_HSI                                     *
+ *                                 RCC_HSE                                     *
+ *                                 RCC_PLL                                     *
  * *****************************************************************************/
-#define CLK_SYSTEM                   HSE
+#define RCC_CLK_SYSTEM              RCC_HSI
 
 
-
+#if RCC_CLK_SYSTEM			==		RCC_PLL
+	#define RCC_PLL_MUL					2
+	#define RCC_PLL_DIV					4
+	#define RCC_PLL_SORCE				RCC_HSE
+#endif
 
 #endif  /* RCC_CONFIG_H_ */

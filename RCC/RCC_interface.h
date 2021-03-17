@@ -53,7 +53,16 @@ typedef enum
     RCC_GPIOF_EN ,
     RCC_GPIOG_EN ,
     RCC_GPIOH_EN ,
-
+    RCC_TIM1_EN = 0,
+    RCC_TIM8_EN ,
+    RCC_USART1_EN =4,
+    RCC_USART6_EN ,
+    RCC_ADC1_EN = 8,
+    RCC_ADC2_EN ,
+    RCC_ADC3_EN ,
+    RCC_SDIO0_EN,
+    RCC_SPI1_EN,
+    RCC_SPI4_EN,
     RCC_DMA1EN = 21 ,
     RCC_DMA2EN ,
 

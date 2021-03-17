@@ -14,7 +14,6 @@
  */
 
 
-
 /*               RCC Base Address On AHP Bus               */
 #define RCC_BASE_ADDRESS          ((u32)(0x40023800))
 
@@ -55,7 +54,9 @@
 
 
 
-
+#define RCC_HSI					0
+#define RCC_HSE					1
+#define RCC_PLL					2
 
 
 #endif  /* RCC_PRIVATE_H_ */
