@@ -6,8 +6,9 @@
  ****************************************************************************************/
 
 
-#include "STD_Types.h"
-#include "BIT_Math.h"
+#include "../Lib/STD_Types.h"
+#include "../Lib/BIT_Math.h"
+
 
 #include "NVIC_interface.h"
 #include "NVIC_private.h"
@@ -198,7 +199,7 @@ u8      NVIC_u8GetActiveFlag(u8 Copy_u8InterruptNumb)
 }   /* NVIC_u8GetActiveFlag */
 
 
-void    NVIC_voidSetPriority(u8 Copy_u8InterruptNumb, u8 Copy_u8Priority)
+void    NVIC_voidSetPriority(u8 Copy_u8Priority, u8 Copy_u8InterruptNumb)
 {
     if(Copy_u8InterruptNumb < 97)
     {
