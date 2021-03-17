@@ -56,7 +56,8 @@ typedef enum
 typedef enum
 {
 	GPIO_OUTPUT_PUSHPULL = 0,
-	GPIO_OUTPUT_OPENDRAIN
+	GPIO_OUTPUT_OPENDRAIN ,
+	GPIO_INPUT_FLOATING
 }gpio_enumOTR;
 
 typedef enum
