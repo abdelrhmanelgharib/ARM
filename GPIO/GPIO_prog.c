@@ -7,10 +7,10 @@
 
 #include "STD_Types.h"
 #include "BIT_Math.h"
-
+#include "GPIO_interface.h"
 #include "GPIO_private.h"
 #include "GPIO_config.h"
-#include "GPIO_interface.h"
+
 
 /* *************************************************************************************
  * in this function initialize port and pin direction and mode of pin					*
@@ -1177,3 +1177,76 @@ value_enumType GPIO_enumGetPinvalue(gpio_enumtype Copy_enumGPIOType, gpio_enumpi
 
 	return Ret_value;
 }	/* GPIO_voidGetPinvalue */
+
+
+
+
+void GPIO_voidSetAltFunction(u8 Copy_u8PortID,u8 Copy_u8PinID ,u8 Copy_u8AltValue)
+{
+	switch(Copy_u8PortID)
+	{
+		case GPIOA:
+			if(Copy_u8PinID < GPIO_PIN8)
+			{
+				GPIOA_AFRL |= ( Copy_u8AltValue << (Copy_u8PinID*4) );
+			}
+			else
+			{
+				GPIOA_AFRH |= ( Copy_u8AltValue << ( (Copy_u8PinID%8) * 4 ) );
+			}break;
+
+		case GPIOB:
+			if(Copy_u8PinID < GPIO_PIN8)
+			{
+				GPIOB_AFRL |= ( Copy_u8AltValue << (Copy_u8PinID*4) );
+			}
+			else
+			{
+				GPIOB_AFRH |= ( Copy_u8AltValue << ( (Copy_u8PinID%8) * 4 ) );
+			}break;
+
+		case GPIOC:
+			if(Copy_u8PinID < GPIO_PIN8)
+			{
+				GPIOC_AFRL |= ( Copy_u8AltValue << (Copy_u8PinID*4) );
+			}
+			else
+			{
+				GPIOC_AFRH |= ( Copy_u8AltValue << ( (Copy_u8PinID%8) * 4 ) );
+			}break;
+
+		case GPIOD:
+			if(Copy_u8PinID < GPIO_PIN8)
+			{
+				GPIOD_AFRL |= ( Copy_u8AltValue << (Copy_u8PinID*4) );
+			}
+			else
+			{
+				GPIOD_AFRH |= ( Copy_u8AltValue << ( (Copy_u8PinID%8) * 4 ) );
+			}break;
+
+		case GPIOE:
+			if(Copy_u8PinID < GPIO_PIN8)
+			{
+				GPIOE_AFRL |= ( Copy_u8AltValue << (Copy_u8PinID*4) );
+			}
+			else
+			{
+				GPIOE_AFRH |= ( Copy_u8AltValue << ( (Copy_u8PinID%8) * 4 ) );
+			}break;
+
+		case GPIOH:
+			if(Copy_u8PinID < GPIO_PIN8)
+			{
+				GPIOH_AFRL |= ( Copy_u8AltValue << (Copy_u8PinID*4) );
+			}
+			else
+			{
+				GPIOH_AFRH |= ( Copy_u8AltValue << ( (Copy_u8PinID%8) * 4 ) );
+			}break;
+		default:
+			break;
+
+	}
+}
+
